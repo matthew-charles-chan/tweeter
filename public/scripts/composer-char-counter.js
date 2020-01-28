@@ -6,10 +6,8 @@ $(document).ready(function() {
     if (tweetLength > 140) {
       $(this).val($(this).val().substr(0,140));
     } else {
-      const remainingChars = (140 - tweetLength);
-      $counter.text(remainingChars);
+      $counter.text(140 - tweetLength);
     }
   };
-  $($newTweetInput).keyup(displayRemainingChars);
-  $($newTweetInput).keydown(displayRemainingChars);
+  $($newTweetInput).on('input', displayRemainingChars);
 });

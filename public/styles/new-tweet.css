@@ -2,10 +2,10 @@
   height: 200px;
 }
 
-form {
+/* form {
   width: 90%;
   margin: auto;
-}
+} */
 
 .counter {
   float: right;
@@ -22,8 +22,8 @@ textarea {
   color: #545149;
   font-family: source sans pro;
   font-weight: bold;
-  height: 60;
-  padding-top: 1em;
+  height: auto;
+  padding-top: .8em;
 }
 
 input {
