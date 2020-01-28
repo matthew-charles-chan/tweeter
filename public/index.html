@@ -11,15 +11,14 @@
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="./styles/nav.css" type="text/css">
     <link rel="stylesheet" href="./styles/header.css" type="text/css">
-    <link rel="stylesheet" href="styles/new-tweet.css" type="text/css"
+    <link rel="stylesheet" href="styles/new-tweet.css" type="text/css">
 
     <!-- External JS -->
-    <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
-
+    <script src="/vendor/jquery-2.2.3.min.js"></script>
+    <script src="scripts/composer-char-counter.js"></script>
     <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
   </head>
-
+  
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
@@ -35,19 +34,19 @@
       <div>
         <h2>Matthew Chan</h2>
       </div>
-  </header>
+    </header>
     <main class="container">
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form>
-          <textarea name="text" placeholder="What are you humming about?"></textarea>
+          <textarea class="text-input" name="text" placeholder="What are you humming about?"></textarea>
           <input type="submit" value="Tweet">
           <span class="counter">140</span>
         </form>
       </section>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc consequat interdum varius sit. Arcu odio ut sem nulla. Porta nibh venenatis cras sed felis. Posuere ac ut consequat semper viverra nam libero justo laoreet. Turpis egestas pretium aenean pharetra magna ac. Aliquet bibendum enim facilisis gravida neque convallis a. Nisi lacus sed viverra tellus in hac. Odio facilisis mauris sit amet. Morbi tincidunt augue interdum velit euismod in pellentesque massa. Vitae et leo duis ut diam quam nulla porttitor. Dignissim enim sit amet venenatis urna cursus.
-
+        
         Morbi tristique senectus et netus et. Leo in vitae turpis massa sed. Lacus suspendisse faucibus interdum posuere. Erat nam at lectus urna. Amet luctus venenatis lectus magna fringilla. Sit amet facilisis magna etiam tempor orci eu lobortis. In tellus integer feugiat scelerisque varius morbi. Ultricies mi quis hendrerit dolor magna eget est. Egestas pretium aenean pharetra magna ac placerat vestibulum lectus. Amet aliquam id diam maecenas. Semper feugiat nibh sed pulvinar proin gravida hendrerit. Nam at lectus urna duis convallis. Semper eget duis at tellus at urna condimentum.
         
         Mi ipsum faucibus vitae aliquet nec. Sit amet nisl purus in mollis nunc. Magnis dis parturient montes nascetur ridiculus mus mauris vitae. Ac turpis egestas sed tempus urna et pharetra pharetra. Vel fringilla est ullamcorper eget. Nibh nisl condimentum id venenatis a condimentum vitae sapien. Montes nascetur ridiculus mus mauris vitae ultricies leo integer. Eget nunc scelerisque viverra mauris in. Lectus proin nibh nisl condimentum id venenatis a. Neque laoreet suspendisse interdum consectetur libero id faucibus nisl. Tellus in metus vulputate eu scelerisque. Ipsum dolor sit amet consectetur adipiscing. Eu sem integer vitae justo eget magna. Volutpat blandit aliquam etiam erat velit scelerisque in dictum non. Dui accumsan sit amet nulla facilisi morbi tempus. Velit dignissim sodales ut eu sem integer. Cursus euismod quis viverra nibh cras pulvinar mattis nunc.
@@ -55,9 +54,11 @@
         Nulla porttitor massa id neque aliquam vestibulum morbi blandit. Amet luctus venenatis lectus magna fringilla urna porttitor rhoncus. Cursus mattis molestie a iaculis at erat pellentesque. Cras ornare arcu dui vivamus arcu. Nunc consequat interdum varius sit amet. Et leo duis ut diam quam. Diam maecenas sed enim ut sem. Placerat vestibulum lectus mauris ultrices eros in cursus turpis massa. Vitae sapien pellentesque habitant morbi tristique senectus et netus. Ante in nibh mauris cursus mattis molestie a iaculis. A pellentesque sit amet porttitor eget dolor. Lectus quam id leo in. Mattis rhoncus urna neque viverra justo. Accumsan lacus vel facilisis volutpat. Dictumst vestibulum rhoncus est pellentesque. Metus vulputate eu scelerisque felis imperdiet proin fermentum.
         
         Vitae tortor condimentum lacinia quis vel eros donec ac. Ultrices sagittis orci a scelerisque purus semper. Viverra maecenas accumsan lacus vel facilisis. Ut tristique et egestas quis ipsum suspendisse ultrices gravida. Vitae semper quis lectus nulla at. Quisque id diam vel quam elementum pulvinar etiam. Fusce id velit ut tortor pretium viverra. Ut tristique et egestas quis. Vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique. Sit amet risus nullam eget. Sit amet justo donec enim. Congue eu consequat ac felis donec et odio. Vulputate sapien nec sagittis aliquam. Vitae sapien pellentesque habitant morbi tristique senectus.
-      
+        
         Sitting mistake towards his few country ask. You delighted two rapturous six depending objection happiness something the. Off nay impossible dispatched partiality unaffected. Norland adapted put ham cordial. Ladies talked may shy basket narrow see. Him she distrusts questions sportsmen. Tolerably pretended neglected on my earnestly by. Sex scale sir style truth ought. 
       </p>
-  </main>
+    </main>
+    <script src="/scripts/client.js"></script>
   </body>
-</html>
+  </html>
+  
