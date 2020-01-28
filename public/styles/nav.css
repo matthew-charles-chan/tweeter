@@ -1,6 +1,6 @@
 nav {
-  position: fixed;
   top: 0;
+  position: fixed;
   height: 120px;
   width: 100%;
   z-index: 9999 ;
@@ -10,6 +10,6 @@ nav {
 
 span {
   float: left;
-  padding: 1.5em;
+  margin: 1.5em;
   font-family: bungee, sans-serif; 
 }

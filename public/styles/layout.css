@@ -13,11 +13,10 @@ html {
 /*
  * Global layout stuff
  */
-nav {
-  font-family: bungee, sans-serif;
-}
+
 
 body {
+  margin-top:120px ;
   font-family: source sans pro, sans-serif;
   color: #545149;
   background-color: #f4f1ec;
@@ -27,3 +26,8 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+ main {
+   margin: auto;
+   width: 90%;
+   background-color: #f4f1ec;
+ }
