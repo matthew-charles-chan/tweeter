@@ -8,7 +8,7 @@ nav {
   color: #FFFF;
 }
 
-span {
+nav span {
   float: left;
   margin: 1.5em;
   font-family: bungee, sans-serif; 

@@ -1,5 +1,4 @@
 body .all-tweets {
-  font-family: source sans pro;
   position: relative;
   background-color: #f4f1ec;
 }
@@ -20,7 +19,6 @@ body .all-tweets {
 }
 .tweet-header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   margin: auto;
   width: 95%;
@@ -28,14 +26,10 @@ body .all-tweets {
   height: 3em;
 }
 .tweet-header span {
-  font-family: source sans pro;
+  float: left;
   margin: .5em;
 }
 
-.tweet .creator-info {
-  display: flex;
-  align-items: center;
-}
 
 .tweet-header img {
   width: 2em;
@@ -43,10 +37,14 @@ body .all-tweets {
   float: left;
 }
 
+.tweet-header .name {
+  float: left;
+}
+
 .tweet-header .handle {
+  margin-left: auto;
   visibility: hidden;
   opacity: 0;
-  float: right;
   color: #8aa596;
 }
 

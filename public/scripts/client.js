@@ -16,29 +16,59 @@ $(document).ready(function() {
       },
     "created_at": 1461116232227
  }
- let tweet = `
-  <div class= "tweet">
-    <header class= "tweet-header">
-      <div class = "creator-info">
-        <span><img src=${tweetData.user.avatars}></span>
-        <span class= "name">${tweetData.user.name}</span>
-      </div>
-      <span class= "handle">${tweetData.user.handle}</span>
-    </header>
-    <blockquote class="tweet-content">${tweetData.content.text}!</blockquote>
-    <hr class="ruler-line">
-    <footer class="tweet-footer">
-      <time>10 days ago</time>
-      <img src="images/heart-black.png">
-    </footer>
-  </div>
-  `
+  // const createTweetElement = function (tweet) {
+  //   let $tweet = $
+  // }
+
+  // const $tweet = createTweetElement(tweetData) 
+
+
   const $input = $('input')
   $input.on('click', (event) => {
-    const $tweet = $('#tweets-container')
-    const newTweet = $(tweet)
+    const $tweet = $('<article>').addClass('tweet')
+    let tweetElement = `
+      <header class= "tweet-header">
+        <div class = "creator-info">
+          <span><img src=${tweetData.user.avatars}></span>
+          <span class= "name">${tweetData.user.name}</span>
+        </div>
+        <span class= "handle">${tweetData.user.handle}</span>
+      </header>
+      <blockquote class="tweet-content">${tweetData.content.text}!</blockquote>
+      <hr class="ruler-line">
+      <footer class="tweet-footer">
+        <time>10 days ago</time>
+        <img src="images/heart-black.png">
+      </footer>
+      `
+    $tweet.append(tweetElement);
 
-    $tweet.append(newTweet)
+    $("#tweets-container").append($tweet)
+
+    // const renderTweets = function(tweet)
+
+
+
+    const createTweetElement = function(tweet) {
+      const $tweet = $('<article>').addClass('tweet')
+      let tweetElement = `
+        <header class= "tweet-header">
+          <div class = "creator-info">
+            <span><img src=${tweetData.user.avatars}></span>
+            <span class= "name">${tweetData.user.name}</span>
+          </div>
+          <span class= "handle">${tweetData.user.handle}</span>
+        </header>
+        <blockquote class="tweet-content">${tweetData.content.text}!</blockquote>
+        <hr class="ruler-line">
+        <footer class="tweet-footer">
+          <time>10 days ago</time>
+          <img src="images/heart-black.png">
+        </footer>
+      `
+      $tweet.append(tweetElement);
+      return $tweet
+    }
   })
 
 
