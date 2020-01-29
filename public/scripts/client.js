@@ -19,9 +19,11 @@ $(document).ready(function() {
  let tweet = `
   <div class= "tweet">
     <header class= "tweet-header">
-      <span><img src=${tweetData.user.avatars}></span>
-      <span class= "name">${tweetData.user.name}</span>
-      <span class= "handle">${tweetData.user.handle}/span>
+      <div class = "creator-info">
+        <span><img src=${tweetData.user.avatars}></span>
+        <span class= "name">${tweetData.user.name}</span>
+      </div>
+      <span class= "handle">${tweetData.user.handle}</span>
     </header>
     <blockquote class="tweet-content">${tweetData.content.text}!</blockquote>
     <hr class="ruler-line">
