@@ -1,10 +1,10 @@
-body .all-tweets {
+#tweets-container {
   position: relative;
   background-color: #f4f1ec;
 }
 
-.all-tweets .tweet {
-  margin-top: 1em;
+.tweet {
+  margin: 1em auto;
   height: auto;
   border: #545149 solid .2em;
 }
