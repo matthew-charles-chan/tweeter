@@ -26,7 +26,7 @@ $(document).ready(function() {
    
    
    markup = `
-   <article class= "tweet">
+   <div class= "tweet">
    <header class= "tweet-header">
      <span><img src=${tweetData.user.avatars}></span>
      <span class= "name">${tweetData.user.name}</span>
@@ -38,7 +38,7 @@ $(document).ready(function() {
      <time>10 days ago</time>
      <img src="images/heart-black.png">
    </footer>
- </article>
+ </div>
    `
 
  }

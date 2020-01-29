@@ -7,9 +7,7 @@ body .all-tweets {
 .all-tweets .tweet {
   margin-top: 1em;
   height: 9em;
-  border-style: solid;
-  border-width: .2em;
-  border-color: #545149;
+  border: #545149 solid .2em;
 }
 
 .tweet:hover{
@@ -21,6 +19,9 @@ body .all-tweets {
   opacity: 1;
 }
 .tweet-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin: auto;
   width: 95%;
   top: 0;
@@ -30,12 +31,15 @@ body .all-tweets {
   font-family: source sans pro;
   margin: .5em;
 }
+
+.tweet .creator-info {
+  display: flex;
+  align-items: center;
+}
+
 .tweet-header img {
   width: 2em;
   height: 2em; 
-}
-.tweet-header .name {
-  margin-top: .85em;
   float: left;
 }
 
@@ -46,14 +50,12 @@ body .all-tweets {
   color: #8aa596;
 }
 
-
 .tweet hr {
   width: 95%;
   height: .1em;
   border:0;
   background-color: #545149;
 }
-
 
 .tweet-content {
   font-weight: bold;
@@ -78,12 +80,10 @@ body .all-tweets {
   width: 1em;
   height: 1em;
   margin-bottom: .5em;
-
 }
 
 article .tweet{
   border-style: solid;
   border-width: 5px;
   border-color: #545149;
-
 }

@@ -17,10 +17,7 @@
 textarea {
   background-color: #f4f1ec;
   width: 100%;
-  border-top: 0;
-  border-left: 0;
-  border-right: 0;
-  border-bottom-width: .20em;
+  border-width: 0 0 .2em;
   color: #545149;
   font-family: source sans pro;
   font-weight: bold;
