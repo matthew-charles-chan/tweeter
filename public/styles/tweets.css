@@ -1,0 +1,61 @@
+body .all-tweets {
+  font-family: source sans pro;
+  height: 200px;
+  position: relative;
+  background-color: #f4f1ec;
+  border-style: solid;
+  border-width: .2em;
+  border-color: #545149;
+}
+
+.tweet-header {
+  font-family: source sans pro;
+  position: relative;
+  background-color: #f1ec;
+  top: 0;
+  height: 4em;
+}
+.tweet-header span {
+  margin: .5em;
+  top:0;
+  font-family: source sans pro;
+  float: left;
+  left: 0;
+}
+
+.tweet hr {
+  width: 90%;
+  height: .1em;
+  border:0;
+  background-color: #545149;
+}
+
+.tweet-footer {
+  position: absolute;
+  width: 100%;
+  height: 1em;
+  bottom: 0;
+}
+
+.tweet-footer time {
+  position: absolute;
+  bottom: 0;
+  float: left;
+}
+
+
+
+.tweet-footer img {
+  float: right;
+  width: 1em;
+  height: 1em;
+  margin: .1em;
+  bottom: 1em;
+}
+
+article .tweet{
+  border-style: solid;
+  border-width: 5px;
+  border-color: #545149;
+
+}

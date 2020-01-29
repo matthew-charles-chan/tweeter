@@ -1,4 +1,4 @@
-header {
+#header {
   position: relative;
   height: 400px;
   width: 100%;
@@ -6,13 +6,13 @@ header {
   background-image: url("https://www.transparenttextures.com/patterns/arches.png");;
 }
 
-img {
+#header img {
   position: relative;
   display: block;  
   margin-left: auto;
   margin-right: auto;
 }
 
-h2 {
+#header h2 {
   text-align: center;
 }

@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./styles/nav.css" type="text/css">
     <link rel="stylesheet" href="./styles/header.css" type="text/css">
     <link rel="stylesheet" href="styles/new-tweet.css" type="text/css">
+    <link rel="stylesheet" href="styles/tweets.css" type="text/css">
 
     <!-- External JS -->
     <script src="/vendor/jquery-2.2.3.min.js"></script>
@@ -26,7 +27,7 @@
       <span style="font-family: source sans pro; float: right;">Write a new tweet</span>
     </nav>
     <!-- Page-specific (main) content here -->
-    <header>
+    <header id="header" >
       <div>
         <img src="/images/profile-hex.png"> 
       </div>
@@ -44,19 +45,33 @@
           <span class="counter">140</span>
         </form>
       </section>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc consequat interdum varius sit. Arcu odio ut sem nulla. Porta nibh venenatis cras sed felis. Posuere ac ut consequat semper viverra nam libero justo laoreet. Turpis egestas pretium aenean pharetra magna ac. Aliquet bibendum enim facilisis gravida neque convallis a. Nisi lacus sed viverra tellus in hac. Odio facilisis mauris sit amet. Morbi tincidunt augue interdum velit euismod in pellentesque massa. Vitae et leo duis ut diam quam nulla porttitor. Dignissim enim sit amet venenatis urna cursus.
-        
-        Morbi tristique senectus et netus et. Leo in vitae turpis massa sed. Lacus suspendisse faucibus interdum posuere. Erat nam at lectus urna. Amet luctus venenatis lectus magna fringilla. Sit amet facilisis magna etiam tempor orci eu lobortis. In tellus integer feugiat scelerisque varius morbi. Ultricies mi quis hendrerit dolor magna eget est. Egestas pretium aenean pharetra magna ac placerat vestibulum lectus. Amet aliquam id diam maecenas. Semper feugiat nibh sed pulvinar proin gravida hendrerit. Nam at lectus urna duis convallis. Semper eget duis at tellus at urna condimentum.
-        
-        Mi ipsum faucibus vitae aliquet nec. Sit amet nisl purus in mollis nunc. Magnis dis parturient montes nascetur ridiculus mus mauris vitae. Ac turpis egestas sed tempus urna et pharetra pharetra. Vel fringilla est ullamcorper eget. Nibh nisl condimentum id venenatis a condimentum vitae sapien. Montes nascetur ridiculus mus mauris vitae ultricies leo integer. Eget nunc scelerisque viverra mauris in. Lectus proin nibh nisl condimentum id venenatis a. Neque laoreet suspendisse interdum consectetur libero id faucibus nisl. Tellus in metus vulputate eu scelerisque. Ipsum dolor sit amet consectetur adipiscing. Eu sem integer vitae justo eget magna. Volutpat blandit aliquam etiam erat velit scelerisque in dictum non. Dui accumsan sit amet nulla facilisi morbi tempus. Velit dignissim sodales ut eu sem integer. Cursus euismod quis viverra nibh cras pulvinar mattis nunc.
-        
-        Nulla porttitor massa id neque aliquam vestibulum morbi blandit. Amet luctus venenatis lectus magna fringilla urna porttitor rhoncus. Cursus mattis molestie a iaculis at erat pellentesque. Cras ornare arcu dui vivamus arcu. Nunc consequat interdum varius sit amet. Et leo duis ut diam quam. Diam maecenas sed enim ut sem. Placerat vestibulum lectus mauris ultrices eros in cursus turpis massa. Vitae sapien pellentesque habitant morbi tristique senectus et netus. Ante in nibh mauris cursus mattis molestie a iaculis. A pellentesque sit amet porttitor eget dolor. Lectus quam id leo in. Mattis rhoncus urna neque viverra justo. Accumsan lacus vel facilisis volutpat. Dictumst vestibulum rhoncus est pellentesque. Metus vulputate eu scelerisque felis imperdiet proin fermentum.
-        
-        Vitae tortor condimentum lacinia quis vel eros donec ac. Ultrices sagittis orci a scelerisque purus semper. Viverra maecenas accumsan lacus vel facilisis. Ut tristique et egestas quis ipsum suspendisse ultrices gravida. Vitae semper quis lectus nulla at. Quisque id diam vel quam elementum pulvinar etiam. Fusce id velit ut tortor pretium viverra. Ut tristique et egestas quis. Vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique. Sit amet risus nullam eget. Sit amet justo donec enim. Congue eu consequat ac felis donec et odio. Vulputate sapien nec sagittis aliquam. Vitae sapien pellentesque habitant morbi tristique senectus.
-        
-        Sitting mistake towards his few country ask. You delighted two rapturous six depending objection happiness something the. Off nay impossible dispatched partiality unaffected. Norland adapted put ham cordial. Ladies talked may shy basket narrow see. Him she distrusts questions sportsmen. Tolerably pretended neglected on my earnestly by. Sex scale sir style truth ought. 
-      </p>
+      <section class="all-tweets">
+        <article class= "tweet">
+          <header class= "tweet-header">
+            <span class= "name">Matthew Chan</span>
+            <span class= "handle">@mchan92</span>
+          </header>
+          <blockquote>Wow! I suck at CSS!</blockquote>
+          <hr class="ruler-line">
+          <footer class="tweet-footer">
+            <time>10 days ago</time>
+            <img src="images/heart-black.png">
+          </footer>
+        </article>
+      </section>
+      <section class="paragraph">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean cursus arcu ante, ut scelerisque tortor vulputate sed. Sed accumsan lacus leo, eu imperdiet ipsum tincidunt dapibus. Praesent in pellentesque est. Donec urna nisi, pellentesque sed rutrum sit amet, sollicitudin id arcu. Vivamus pulvinar auctor massa, vel tincidunt lacus facilisis efficitur. Morbi at lorem metus. Cras hendrerit ligula nibh, sed aliquet leo feugiat at.
+
+Donec vel nibh justo. Maecenas tempus nisl dui, sit amet mattis tortor vestibulum eu. Aenean sit amet metus sit amet nulla posuere bibendum. Integer vel magna rhoncus, dictum elit sed, commodo eros. Vivamus porttitor lorem eget felis efficitur, sit amet convallis elit rhoncus. Vestibulum iaculis pulvinar porta. Proin pulvinar libero mi, sit amet laoreet nunc blandit vitae. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et mattis libero. Curabitur pretium dui ut urna lacinia porta. Ut luctus at felis vehicula luctus. Etiam vehicula nisl cursus neque blandit, ut porttitor nisl viverra. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec volutpat finibus ex eget congue. Phasellus nisi urna, sodales eu nulla ac, congue vehicula dolor.
+
+Nulla facilisi. Morbi nec ex efficitur, varius quam eget, facilisis metus. Cras congue gravida justo at consectetur. Nunc iaculis vulputate auctor. Praesent ante enim, bibendum ac pellentesque ut, vehicula in neque. Nam non blandit dui, nec sodales nibh. Ut accumsan elit sit amet leo tempus, a posuere magna mollis. Pellentesque vitae sodales augue.
+
+Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque at tristique massa. Donec a mauris a sem vehicula semper. Ut eu nunc pretium, ultrices nibh sit amet, efficitur massa. Etiam metus risus, tincidunt vel tellus vel, suscipit luctus velit. Morbi consectetur leo sit amet dolor mollis tempor. Curabitur rhoncus dapibus ante fermentum tincidunt. Sed tincidunt, mi id faucibus gravida, metus leo rutrum odio, in vehicula eros turpis in lacus. Sed eget rhoncus nulla. Vestibulum tempor, ligula vel malesuada iaculis, orci orci cursus massa, vel egestas neque turpis et mauris. Morbi eu urna posuere dolor pharetra cursus. Sed tempus, nisl at posuere imperdiet, enim est mollis augue, non interdum sem nisl eu quam. Nullam dictum, tellus sit amet dictum eleifend, libero arcu congue ex, vitae faucibus orci lectus sed mi. Mauris vitae nisi ac risus tristique vehicula faucibus ut mauris. Maecenas a dignissim erat.
+
+Ut eu dictum risus. In quam massa, blandit a elementum non, semper dapibus velit. Nullam porttitor justo elementum orci tempor fringilla eu efficitur orci. Curabitur at hendrerit eros, ut pharetra nisl. Nulla facilisi. Sed commodo leo quis porttitor aliquam. Vivamus eu molestie nulla, id consequat orci. Aenean sit amet leo a mauris consectetur auctor. Praesent pulvinar metus vel eros dignissim, id pellentesque elit ultrices. In imperdiet porta neque et vestibulum. Integer quis eros laoreet, hendrerit turpis vitae, convallis turpis. Proin posuere mattis venenatis. Vestibulum id sapien tortor. Sed eget ullamcorper odio. Suspendisse at nisl justo. Cras in viverra ante.
+        </p>
+      </section>
     </main>
     <script src="/scripts/client.js"></script>
   </body>
