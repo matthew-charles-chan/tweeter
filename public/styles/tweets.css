@@ -23,13 +23,18 @@ body .all-tweets {
 .tweet-header {
   position: relative;
   top: 0;
-  height: 2.2em;
+  height: 3em;
 }
 .tweet-header span {
   font-family: source sans pro;
   margin: .5em;
 }
+.tweet-header img {
+  width: 2em;
+  height: 2em;
+}
 .tweet-header .name {
+  margin-top: 1em;
   float: left;
 }
 
