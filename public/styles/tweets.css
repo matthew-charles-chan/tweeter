@@ -5,7 +5,7 @@ body .all-tweets {
 
 .all-tweets .tweet {
   margin-top: 1em;
-  height: 9em;
+  height: auto;
   border: #545149 solid .2em;
 }
 
@@ -34,7 +34,8 @@ body .all-tweets {
 .tweet-header img {
   width: 2em;
   height: 2em; 
-  float: left;
+  /* margin: auto; */
+  /* float: left; */
 }
 
 .tweet-header .name {
@@ -61,23 +62,19 @@ body .all-tweets {
 }
 
 .tweet-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
   font-size: .75em;
   width: 95%;
   height: 2em;
-  bottom: 0;
   margin: auto;
 }
 
-.tweet-footer time {
-  margin-bottom: .75em;
-  float: left;
-}
-
 .tweet-footer img {
-  float: right;
   width: 1em;
   height: 1em;
-  margin-bottom: .5em;
 }
 
 article .tweet{
