@@ -5,11 +5,11 @@ body .all-tweets {
 }
 
 .all-tweets .tweet {
+  margin-top: 1em;
   height: 9em;
   border-style: solid;
   border-width: .2em;
   border-color: #545149;
-  /* box-shadow: 5px 7px #8aa596;  */
 }
 
 .tweet:hover{
@@ -21,7 +21,8 @@ body .all-tweets {
   opacity: 1;
 }
 .tweet-header {
-  position: relative;
+  margin: auto;
+  width: 95%;
   top: 0;
   height: 3em;
 }
@@ -31,10 +32,10 @@ body .all-tweets {
 }
 .tweet-header img {
   width: 2em;
-  height: 2em;
+  height: 2em; 
 }
 .tweet-header .name {
-  margin-top: 1em;
+  margin-top: .85em;
   float: left;
 }
 
@@ -61,15 +62,14 @@ body .all-tweets {
 
 .tweet-footer {
   font-size: .75em;
-  position: absolute;
-  width: 100%;
+  width: 95%;
   height: 2em;
   bottom: 0;
+  margin: auto;
 }
 
 .tweet-footer time {
   margin-bottom: .75em;
-  margin-left: .75em;
   float: left;
 }
 
@@ -77,7 +77,6 @@ body .all-tweets {
   float: right;
   width: 1em;
   height: 1em;
-  margin-right: 1em;
   margin-bottom: .5em;
 
 }
