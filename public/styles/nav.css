@@ -1,4 +1,8 @@
 nav {
+  padding: 1.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   top: 0;
   position: fixed;
   height: 120px;
@@ -8,8 +12,48 @@ nav {
   color: #FFFF;
 }
 
-nav span {
+/* nav span {
+  width: auto;
   float: left;
-  margin: 1.5em;
-  font-family: bungee, sans-serif; 
+  font-family: source sans pro;
+  border-color: #4056A1;
+} */
+
+.logo {
+  font-family: bungee;
+}
+
+nav button {
+  margin-left: .2em;
+  border-width: .2em;
+  border-color: #4056A1;
+  font-family: bungee;
+  color: #FFFF;
+  background-color: #4056A1;
+  float: right;
+}
+
+nav button:hover {
+  animation: none;
+  opacity: 1;
+  border-width: .2em;
+  border-color: #FFFF;
+}
+
+.pulse {
+  -webkit-animation: pulsate 2s ease-out;
+  -webkit-animation-iteration-count: infinite; 
+  opacity: 0.5; 
+}
+
+@-webkit-keyframes pulsate {
+  0% { 
+      opacity: 0.5;
+  }
+  50% { 
+      opacity: 1.0;
+  }
+  100% { 
+      opacity: 0.5;
+  }
 }

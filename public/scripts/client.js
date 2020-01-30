@@ -5,31 +5,31 @@
  */
 
 $(document).ready(function() {
-  const data = [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png"
-        ,
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-      "created_at": 1461116232227
-    },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd" },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1461113959088
-    }
-  ]
+  const BASE_URL = "http://localhost:8080"
+  
+  const calculateTimeAgo = function (current, previous) {
+    let minute = 60 * 1000;
+    let hour = minute * 60;
+    let day = hour * 24;
+    let month = day * 30;
+    let year = day * 365;
+    
+    const elapsed = current - previous;
 
+    if (elapsed < minute) {
+      return Math.round(elapsed / 1000) + ' seconds ago';
+    } else if (elapsed < hour) {
+      return (Math.round(elapsed / minute) + ' minutes ago');
+    } else if (elapsed < day) {
+      return (Math.round(elapsed / hour) + ' hours ago');
+    } else if (elapsed < month) {
+      return (Math.round(elapsed / day) + ' days ago');
+    } else if (elapsed < year) {
+      return (Math.round(elapsed / month) + ' months ago');
+    } else {
+      return (Math.round(elapsed / year)  + ' years ago');
+    }
+  }
 
   const renderTweets = function(tweets) {
     $tweets = $("#tweets-container")
@@ -37,42 +37,20 @@ $(document).ready(function() {
       $tweets.prepend(createTweetElement(tweet))
     })
   }
-
+  
   const createTweetElement = function(tweet) {
     const $tweet = $('<article>').addClass('tweet')
-    const calculateTimeAgo = function (current, previous) {
-      let minute = 60 * 1000;
-      let hour = minute * 60;
-      let day = hour * 24;
-      let month = day * 30;
-      let year = day * 365;
-      
-      const elapsed = current - previous;
-
-      if (elapsed < minute) {
-        return Math.round(elapsed / 1000) + ' seconds ago';
-      } else if (elapsed < hour) {
-        return (Math.round(elapsed / minute) + ' minutes ago');
-      } else if (elapsed < day) {
-        return (Math.round(elapsed / hour) + ' hours ago');
-      } else if (elapsed < month) {
-        return (Math.round(elapsed / day) + ' days ago');
-      } else if (elapsed < year) {
-        return (Math.round(elapsed / month) + ' months ago');
-      } else {
-        return (Math.round(elapsed / year)  + ' years ago');
-      }
-    }
     const timeAgo = calculateTimeAgo(Date.now(), tweet.created_at)
 
-
+    // define element divisions (header, blockquote, hr, footer)
     let $header = $('<header>').addClass('tweet-header');
     let $blockquote = $('<blockquote>')
       .addClass('tweet-content')
       .text(tweet.content.text);
     let $hr = $('<hr>').addClass('ruler-line');
     let $footer = $('<footer>').addClass('tweet-footer');
-    
+   
+    // adding class, values and attributes to HEADER elements
     const $profileImage = $('<img>')
       .attr("src", tweet.user.avatars)
     const $name = $('<span>')
@@ -83,26 +61,68 @@ $(document).ready(function() {
       .text(tweet.user.handle) ; 
     $header.append($profileImage, $name, $handle);
 
-    let $time = $('<time>').text(timeAgo);
-    let $heart = $('<img>').attr("src", "images/heart-black.png")
+    // adding class, values and attributes to FOOTER elements
+    const $time = $('<time>').text(timeAgo);
+    const $heart = $('<img>').attr("src", "images/heart-black.png")
     $footer.append($time, $heart);
+    
+    // appends indavidual elements to article('tweet') element 
     $tweet.append($header, $blockquote, $hr, $footer);
+
+    // return created tweet element 
     return $tweet
   }
-  renderTweets(data);
+
+  // POSTs form data to server and renders page with new tweet
+  const $form = $('#new-tweet-form');
+  $form.on('submit', (event) => {
+    event.preventDefault();
+    let $tweetInput = $(this).find('#text-input')
+    const $counter = $('.new-tweet .counter')
+    $counter.text('140');
+    // console.log($counter.val('140'));
+    if ($tweetInput.val() === "" || $tweetInput.val() === null) {
+      alert("Cannot post empty tweet!")
+      return;
+    }
+    if ($tweetInput.val().length > 140) {
+      alert("Tweet exceeds 140 characters. Cannot post!")
+      return;
+    }
+    const serialized = $form.serialize();
+    $.post(`${BASE_URL}/tweets`, serialized)
+      .done(() => {
+        // calls loadtweets function on success
+        loadTweets();
+        // clears form field input
+        $tweetInput.val('');
+      })
+      .fail((err) =>{
+        console.log(err);
+      });
+  });
+
+  const loadTweets = function() {
+    $.ajax({
+      url: `${BASE_URL}/tweets`,
+      method: 'GET',
+      dataType: 'JSON',
+      success: (tweets) => {
+        $("#tweets-container").empty();
+        renderTweets(tweets);
+      }
+    })
+  }
+
+  $("#toggle").click(()=>{
+    if($('#new-tweet-container').hasClass("open")) {
+      $('#new-tweet-container').slideUp().removeClass("open");
+    } else {
+      $("#new-tweet-container").slideDown().addClass("open")
+    }
+  })
+  
+  loadTweets();
+
 });
 
-// STRING LITERAL
-// `
-//   <header class= "tweet-header">
-//     <img src=${tweet.user.avatars}>
-//     <span class= "name">${tweet.user.name}</span>
-//     <span class= "handle">${tweet.user.handle}</span>
-//   </header>
-//   <blockquote class="tweet-content">${tweet.content.text}!</blockquote>
-//   <hr class="ruler-line">
-//   <footer class="tweet-footer">
-//     <time>${timeAgo}</time>
-//     <img src="images/heart-black.png">
-//   </footer>
-// `

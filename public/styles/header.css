@@ -1,11 +1,10 @@
 #header {
-  position: relative;
+  margin-top: 120px;
   height: 400px;
   width: 100%;
-  background-color: #8aa596;
-  background-image: url("https://www.transparenttextures.com/patterns/arches.png");;
+  background-color: #6ca688;
+  background-image: url("https://www.transparenttextures.com/patterns/cardboard.png");
 }
-
 #header img {
   position: relative;
   display: block;  
@@ -14,5 +13,7 @@
 }
 
 #header h2 {
+  font-family: source sans pro;
+  color: #f4f1ec;
   text-align: center;
 }

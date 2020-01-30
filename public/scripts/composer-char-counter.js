@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  const $newTweetInput = $('.new-tweet .text-input');
+  const $newTweetInput = $('#text-input');
   const $counter = $('.new-tweet .counter');
   const displayRemainingChars = function() {
     const tweetLength = $(this).val().length;
