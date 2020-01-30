@@ -1,5 +1,5 @@
 nav {
-  padding: 1.5em;
+  padding: 6%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -11,13 +11,6 @@ nav {
   background-color: #4056A1;
   color: #FFFF;
 }
-
-/* nav span {
-  width: auto;
-  float: left;
-  font-family: source sans pro;
-  border-color: #4056A1;
-} */
 
 .logo {
   font-family: bungee;
@@ -32,7 +25,13 @@ nav button {
   background-color: #4056A1;
   float: right;
 }
-
+span.rightside {
+  display: flex;
+  flex-direction: row;
+  width: 20%;
+  justify-content: space-between;
+  align-items: center;
+}
 nav button:hover {
   animation: none;
   opacity: 1;
@@ -41,7 +40,7 @@ nav button:hover {
 }
 
 .pulse {
-  -webkit-animation: pulsate 2s ease-out;
+  -webkit-animation: pulsate 3s ease-out;
   -webkit-animation-iteration-count: infinite; 
   opacity: 0.5; 
 }
@@ -51,6 +50,8 @@ nav button:hover {
       opacity: 0.5;
   }
   50% { 
+      border-width: .2em;
+      border-color: #FFFF;
       opacity: 1.0;
   }
   100% { 

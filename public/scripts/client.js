@@ -1,12 +1,7 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-
 $(document).ready(function() {
   const BASE_URL = "http://localhost:8080"
   
+  // Calculates relative time and returns a string ('<#> <units>'s ago')
   const calculateTimeAgo = function (current, previous) {
     let minute = 60 * 1000;
     let hour = minute * 60;
@@ -31,6 +26,7 @@ $(document).ready(function() {
     }
   }
 
+  // loops through tweets array, and renders each tweet
   const renderTweets = function(tweets) {
     $tweets = $("#tweets-container")
     tweets.forEach( (tweet) => {
@@ -38,6 +34,7 @@ $(document).ready(function() {
     })
   }
   
+  // takes in tweet-data object and returns a formatted HTML element
   const createTweetElement = function(tweet) {
     const $tweet = $('<article>').addClass('tweet')
     const timeAgo = calculateTimeAgo(Date.now(), tweet.created_at)
@@ -79,7 +76,6 @@ $(document).ready(function() {
     event.preventDefault();
     let $tweetInput = $(this).find('#text-input')
     const $counter = $('.new-tweet .counter')
-    $counter.text('140');
     // console.log($counter.val('140'));
     if ($tweetInput.val() === "" || $tweetInput.val() === null) {
       alert("Cannot post empty tweet!")
@@ -91,8 +87,9 @@ $(document).ready(function() {
     }
     const serialized = $form.serialize();
     $.post(`${BASE_URL}/tweets`, serialized)
-      .done(() => {
-        // calls loadtweets function on success
+    .done(() => {
+      $counter.text('140');
+      // calls loadtweets function on success
         loadTweets();
         // clears form field input
         $tweetInput.val('');
@@ -102,6 +99,7 @@ $(document).ready(function() {
       });
   });
 
+  // AJAX request for tweets and renders each tweet
   const loadTweets = function() {
     $.ajax({
       url: `${BASE_URL}/tweets`,
@@ -114,15 +112,21 @@ $(document).ready(function() {
     })
   }
 
+  // Shows/Hides (slideUp/ slideDown) new-tweet-form 
   $("#toggle").click(()=>{
+    // tweet-container is open, (hide) and remove "open" class 
     if($('#new-tweet-container').hasClass("open")) {
       $('#new-tweet-container').slideUp().removeClass("open");
+      $('#new-tweet-container').find('#text-input').blur();
     } else {
+      // if tweet container is closed (default), on click slideDown (show) tweet-container
       $("#new-tweet-container").slideDown().addClass("open")
+      $('#new-tweet-container').find('#text-input').focus();
     }
   })
   
+
+  //Calls loadTweets function
   loadTweets();
 
 });
-
