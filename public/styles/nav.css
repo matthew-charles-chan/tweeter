@@ -1,48 +1,44 @@
 nav {
-  padding: 6%;
   display: flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 3%;
+  z-index: 9999;
   justify-content: space-between;
   align-items: center;
-  top: 0;
-  position: fixed;
-  height: 120px;
-  width: 100%;
-  z-index: 9999 ;
   background-color: #4056A1;
-  color: #FFFF;
+  color: #f4f1ec;
 }
 
-.logo {
+nav .logo {
   font-family: bungee;
+  font-size: 1.5em;
 }
 
-nav button {
-  margin-left: .2em;
-  border-width: .2em;
-  border-color: #4056A1;
-  font-family: bungee;
-  color: #FFFF;
-  background-color: #4056A1;
-  float: right;
-}
-span.rightside {
+nav .right-side {
   display: flex;
   flex-direction: row;
-  width: 20%;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
 }
-nav button:hover {
+
+#toggle {
+  background-color: #4056A1;
+  border-radius: 5px;
+  border-width: .2em;
+  margin-left: .2em;
+  font-family: bungee;
+  color: #f4f1ec;
+  -webkit-animation: pulsate 3s ease-out;
+  -webkit-animation-iteration-count: infinite; 
+  opacity: 0.5;
+}
+
+#toggle:hover {
   animation: none;
   opacity: 1;
   border-width: .2em;
   border-color: #FFFF;
-}
-
-.pulse {
-  -webkit-animation: pulsate 3s ease-out;
-  -webkit-animation-iteration-count: infinite; 
-  opacity: 0.5; 
 }
 
 @-webkit-keyframes pulsate {
@@ -51,7 +47,7 @@ nav button:hover {
   }
   50% { 
       border-width: .2em;
-      border-color: #FFFF;
+      border-color: #f4f1ec;
       opacity: 1.0;
   }
   100% { 
