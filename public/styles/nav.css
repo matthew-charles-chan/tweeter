@@ -23,6 +23,10 @@ nav .right-side {
   justify-content: center;
 }
 
+nav .right-side .text {
+  align-self: center;  
+}
+
 #toggle {
   background-color: #4056A1;
   border-radius: 5px;

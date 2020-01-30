@@ -48,6 +48,7 @@ $(document).ready(function() {
     let $footer = $('<footer>').addClass('tweet-footer');
    
     // adding class, values and attributes to HEADER elements
+    const $leftSide = $('<div>').addClass('left-side')
     const $profileImage = $('<img>')
       .attr("src", tweet.user.avatars)
     const $name = $('<span>')
@@ -56,7 +57,8 @@ $(document).ready(function() {
     const $handle = $('<span>')
       .addClass('handle')
       .text(tweet.user.handle) ; 
-    $header.append($profileImage, $name, $handle);
+    $leftSide.append($profileImage, $name);
+    $header.append($leftSide, $handle);
 
     // adding class, values and attributes to FOOTER elements
     const $time = $('<time>').text(timeAgo);
