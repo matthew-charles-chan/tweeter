@@ -15,7 +15,6 @@ html {
  */
 
 body {
-  /* margin-top:120px ; */
   display: flex;
   flex-direction: column;
   font-family: source sans pro, sans-serif;
@@ -24,9 +23,6 @@ body {
   font-size: 24px;
 }
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
  main {
    display: flex;
    flex-direction: column;
@@ -41,7 +37,7 @@ body {
    margin-top: 0;
  }
 
-
+/* Responsive design: Desktop */
 @media only screen and (min-width: 1024px) {
   body {
     flex-direction: row;
@@ -74,6 +70,7 @@ body {
   }
 }
 
+/* Responsive design: smartphones up to 550 px */
 @media only screen and (max-width: 550px) {
   body {
     font-size: 18px

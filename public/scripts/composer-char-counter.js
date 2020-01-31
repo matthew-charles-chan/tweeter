@@ -3,15 +3,14 @@ $(document).ready(function() {
   const $counter = $('.new-tweet .counter');
   const displayRemainingChars = function() {
     const tweetLength = $(this).val().length;
-    // only accept first 140 chars into form
+    // if over 140 chars, display counter red
     if (tweetLength > 140) {
-      // $(this).val($(this).val().substr(0,140));
       $counter.css("color", "red");
       $counter.text(140 - tweetLength);
     } else {
+      // if undder 140 chars, display counter black 
       $counter.css("color", "black");
       $counter.text(140 - tweetLength);
-      // if under 140 chars, show remaining chars available
     }
   };
   // on Input into form, display remainin chars

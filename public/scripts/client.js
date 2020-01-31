@@ -78,7 +78,7 @@ $(document).ready(function() {
     event.preventDefault();
     let $tweetInput = $(this).find('#text-input');
     const $counter = $('.new-tweet .counter');
-    // console.log($counter.val('140'));
+    // if tweet empty, slide down error
     if ($tweetInput.val() === "" || $tweetInput.val() === null) {
       $('#tweet-empty').slideDown();
       setTimeout(()=>{
@@ -86,6 +86,7 @@ $(document).ready(function() {
       },1500);
       return;
     }
+    // if tweet over 140 chars, slide down error
     if ($tweetInput.val().length > 140) {
       $('#too-long').slideDown();
       setTimeout(()=>{
@@ -96,6 +97,7 @@ $(document).ready(function() {
     const serialized = $form.serialize();
     $.post(`${BASE_URL}/tweets`, serialized)
       .done(() => {
+        //resets counter to 140
         $counter.text('140');
         // calls loadtweets function on success
         loadTweets();
@@ -133,7 +135,6 @@ $(document).ready(function() {
     }
   });
   
-
   //Calls loadTweets function
   loadTweets();
 
