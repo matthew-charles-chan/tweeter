@@ -16,6 +16,8 @@ html {
 
 body {
   /* margin-top:120px ; */
+  display: flex;
+  flex-direction: column;
   font-family: source sans pro, sans-serif;
   color: #545149;
   background-color: #f4f1ec;
@@ -26,6 +28,8 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
  main {
+   display: flex;
+   flex-direction: column;
    position: relative;
    font-family: source sans pro;
    margin: auto;
@@ -36,3 +40,66 @@ body {
  main .container {
    margin-top: 0;
  }
+
+
+@media only screen and (min-width: 1024px) {
+  body {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  main {
+    max-width: 70vw;
+    padding: 13vh 3vw;
+    margin: 0;
+  }
+
+
+  #header {
+    left: 0;
+    z-index: 9998;
+    position: fixed;
+    /* display: inline-block; */
+    width: 25vw;
+    margin: 13vh 3vw;
+    max-height: 50vh;
+  }
+
+  #new-tweet-container {
+    margin: 0;
+  }
+
+  #tweets-container .tweet {
+    margin-top:0;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  body {
+    font-size: 18px
+  }
+
+  #header {
+    max-height: 30vh;
+  }
+
+  #header img{
+    max-height: 20vh;
+  }
+
+  .tweet .left-side {
+    font-size: 1em;
+  }
+
+  .tweet div img{
+    max-height: 2em;
+  }
+
+  .tweet-content {
+    margin:0;
+  }
+
+  #new-tweet-container {
+    margin-bottom: 0;
+  }
+}
