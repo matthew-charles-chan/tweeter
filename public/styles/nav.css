@@ -34,7 +34,7 @@ nav .right-side .text {
   margin-left: .2em;
   font-family: bungee;
   color: #f4f1ec;
-  -webkit-animation: pulsate 3s ease-out;
+  -webkit-animation: pulsate 2s ease-out;
   -webkit-animation-iteration-count: infinite; 
   opacity: 0.5;
 }

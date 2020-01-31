@@ -1,0 +1,23 @@
+
+.error-messages {
+  padding: 0, 5em;
+  position: relative;
+  margin-top: 1em;
+  align-self: center;
+  justify-self: center;
+}
+
+#too-long {
+  padding: 0 2em;
+  color: red;
+  border: red solid .1em;
+  display: none;
+}
+
+#tweet-empty {
+  padding: 0 2em;
+  color: red;
+  border: red solid .1em;
+  display: none;
+}
+
