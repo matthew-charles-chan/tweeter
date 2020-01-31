@@ -20,6 +20,11 @@
   opacity: 1;
 }
 
+.tweet:hover .tweet-footer svg {
+  visibility: visible;
+  opacity: 1;
+}
+
 .tweet-header {
   display: flex;
   align-items: center;
@@ -63,8 +68,12 @@
   align-items: flex-end;
 
 }
-.tweet-footer img {
+.tweet-footer svg {
+  margin: 0 .5em;
   width: 1em;
   height: 1em;
+  visibility: hidden;
+  opacity: 0;
 }
+
 
